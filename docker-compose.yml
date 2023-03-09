@@ -1,0 +1,21 @@
+
+version: "3.7"
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volumes:
+    #   - django_static_volume:/usr/src/app/static
+    #   - django_media_volume:/usr/src/app/recommendation/media
+    ports:
+    - 8001:8000
+    expose:
+      - 8001
+    # env_file:
+    #   - ./backend/.env
+    # command: gunicorn mainapp.wsgi:application --bind 0.0.0.0:8000 -w 12 --threads=24 --worker-class=gthread --timeout 1800
+    # restart: always
+    # depends_on:
+    #   - db
