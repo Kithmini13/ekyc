@@ -1,0 +1,1429 @@
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 33333333
+INFO:root:Saving video to E:/recorded_video_n/recorded_video_33333333.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 25
+DEBUG:django.utils.autoreload:File D:\new_ekyc_production\ekycv2\ekyc\webcamstreaming\settings.py previous mtime: 1701842182.9201412, current mtime: 1701865022.9914382
+DEBUG:django.utils.autoreload:D:\new_ekyc_production\ekycv2\ekyc\webcamstreaming\settings.py notified as changed. Signal results: [(<function template_changed at 0x0000028886469EE8>, None), (<function translation_file_changed at 0x0000028886D718B8>, None)].
+INFO:django.utils.autoreload:D:\new_ekyc_production\ekycv2\ekyc\webcamstreaming\settings.py changed, reloading.
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 1233335555
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_1233335555.mp4
+ERROR:root:Error: No write access to the specified path.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 45
+INFO:django.server:"GET /api/ekyc/123333566666 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/123333566666/ HTTP/1.1" 200 3817
+INFO:django.server:"GET /static/overlay.png HTTP/1.1" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.1" 200 17910
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.1" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.1" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.1" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.1" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.1" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.1" 200 27549
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.1" 200 7725
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.1" 200 34509
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.1" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.1" 200 356840
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.1" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.1" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.1" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\ekyc production\env379\lib\site-packages\django\urls\resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from 'D:\\new_ekyc_production\\ekycv2\\ekyc\\webcam\\urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\ekyc production\env379\lib\site-packages\django\urls\resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from 'D:\\new_ekyc_production\\ekycv2\\ekyc\\webcam\\urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from 'D:\\new_ekyc_production\\ekycv2\\ekyc\\webcam\\urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 2228
+ERROR:django.request:Internal Server Error: /api/ekyc/save_image/
+ERROR:django.server:"POST /api/ekyc/save_image/ HTTP/1.1" 500 115
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 123333566666
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_123333566666.mp4
+ERROR:root:Error: No write access to the specified path.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 45
+DEBUG:django.utils.autoreload:File D:\new_ekyc_production\ekycv2\ekyc\webcam\views.py previous mtime: 1701969513.7237458, current mtime: 1701969896.5949667
+DEBUG:django.utils.autoreload:D:\new_ekyc_production\ekycv2\ekyc\webcam\views.py notified as changed. Signal results: [(<function template_changed at 0x000001F60F569EE8>, None), (<function translation_file_changed at 0x000001F60FE718B8>, None)].
+INFO:django.utils.autoreload:D:\new_ekyc_production\ekycv2\ekyc\webcam\views.py changed, reloading.
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 123333566666
+INFO:root:Saving video to E:/recorded_video_n/recorded_video_123333566666.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 25
+DEBUG:django.utils.autoreload:File D:\new_ekyc_production\ekycv2\ekyc\webcamstreaming\settings.py previous mtime: 1701934319.093686, current mtime: 1701972215.961455
+DEBUG:django.utils.autoreload:D:\new_ekyc_production\ekycv2\ekyc\webcamstreaming\settings.py notified as changed. Signal results: [(<function template_changed at 0x000001B6C630AEE8>, None), (<function translation_file_changed at 0x000001B6C6C128B8>, None)].
+INFO:django.utils.autoreload:D:\new_ekyc_production\ekycv2\ekyc\webcamstreaming\settings.py changed, reloading.
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"GET /api/ekyc/231214000007 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000007/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000007
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000007.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000007 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000007/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000007 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000007/ HTTP/1.1" 200 121508
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /api/ekyc/download/231214000007 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000007/ HTTP/1.1" 200 28003183
+INFO:django.server:"GET /api/ekyc/download/231214000007 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000007/ HTTP/1.1" 200 28003183
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000007 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000007/ HTTP/1.1" 200 121508
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006/ HTTP/1.1" 200 66106
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006/ HTTP/1.1" 200 55933
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000006
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000006.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000006 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000006/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006/ HTTP/1.1" 200 76408
+INFO:django.server:"GET /api/ekyc/download/231214000006 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000006/ HTTP/1.1" 200 4055604
+INFO:django.server:"GET /api/ekyc/download/231214000006 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000006/ HTTP/1.1" 200 4055604
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000006/ HTTP/1.1" 200 76408
+INFO:django.server:"GET /api/ekyc/231214000009 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000009/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000009
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000009.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000009 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000009 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000009/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000009
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000009.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000009 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000009/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000009 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000009/ HTTP/1.1" 200 117790
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /api/ekyc/download/231214000009 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000009/ HTTP/1.1" 200 20438723
+INFO:django.server:"GET /api/ekyc/231214000010 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000010/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:django.server:"GET /api/ekyc/download/231214000009 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000009/ HTTP/1.1" 200 20438723
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000009 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000009/ HTTP/1.1" 200 117790
+INFO:django.server:"GET /api/ekyc/231214000010 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000010/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000010
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000010.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000010 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000010/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000010 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000010/ HTTP/1.1" 200 102847
+INFO:django.server:"GET /api/ekyc/download/231214000010 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000010/ HTTP/1.1" 200 7619050
+INFO:django.server:"GET /api/ekyc/download/231214000010 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000010/ HTTP/1.1" 200 7619050
+INFO:django.server:"GET /api/ekyc/download/231214000010 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000010/ HTTP/1.1" 200 7619050
+INFO:django.server:"GET /api/ekyc/231214000011 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000011/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:django.server:"GET /api/ekyc/download/231214000010 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000010/ HTTP/1.1" 200 7619050
+INFO:django.server:"GET /api/ekyc/download/231214000010 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000010/ HTTP/1.1" 200 7619050
+INFO:django.server:"GET /api/ekyc/231214000013 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000013/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000013
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000013.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000013 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000013 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000013/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.0" 200 18303
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.0" 200 7889
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.0" 200 2953
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.0" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.0" 200 27549
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.0" 200 34509
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.0" 200 7725
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.0" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.0" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.0" 200 4194304
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.0" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.0" 200 2249728
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/urls/resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seylanb/mainenv1/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from '/home/seylanb/seylan_UAT-V_01.02.26/ekyc/webcam/urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.0" 404 2236
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.0" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 231214000013
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_231214000013.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.0" 200 25
+INFO:django.server:"GET /api/ekyc/231214000013 HTTP/1.0" 301 0
+INFO:django.server:"GET /api/ekyc/231214000013/ HTTP/1.0" 200 4083
+INFO:django.server:"GET /static/overlay.png HTTP/1.0" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.0" 200 21225
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.0" 200 586845
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000013 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000013/ HTTP/1.1" 200 78428
+INFO:django.server:"GET /api/ekyc/download/231214000013 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000013/ HTTP/1.1" 200 5126493
+INFO:django.server:"GET /api/ekyc/download/231214000013 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000013/ HTTP/1.1" 200 5126493
+INFO:django.server:"GET /api/ekyc/download/231214000013 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000013/ HTTP/1.1" 200 5126493
+INFO:django.server:"GET /api/ekyc/download/231214000013 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/download/231214000013/ HTTP/1.1" 200 5126493
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000013 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/retrieve_image/231214000013/ HTTP/1.1" 200 78428
