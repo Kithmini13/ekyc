@@ -7,16 +7,18 @@ class NICSideClassification:
         self.img = cv2.imread(image_path)
         self.img = cv2.resize(self.img, (400, 400))
         self.img = np.expand_dims(self.img, axis=0)
-        self.model = load_model('NIC_side_classifier_model.h5')
+        self.model = load_model('NIC_side_classifier_model_VGG.h5')
 
     def predict(self):
         predictions = self.model.predict(self.img)
+        print("PREDICTIONS: ", predictions)
         predicted_class = np.argmax(predictions[0])
         predicted_probability = np.max(predictions[0])
 
         label_mapping = {
             0: 'Front',
             1: 'Back',
+            2: 'Unknown'
         }
 
         print("predicted_probability", predicted_probability)
@@ -26,3 +28,4 @@ class NICSideClassification:
             predicted_label = "File not recognized"
 
         return predicted_label
+
