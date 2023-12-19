@@ -170,6 +170,7 @@ def upload_file():
                             elif output1['Extraction'] == True and result['classification'] == True:
                                 error_code = "00"
                                 message_code = "Success"
+
                             response = {
                             'userID': Unique_ID,
                             'folder': user_folder,
@@ -188,6 +189,7 @@ def upload_file():
                             'NIC':detail_dict.get('NIC', None),
                             'Address': detail_dict.get('Address', None),
                             'Issuedate': detail_dict.get('Issue Date', None),
+                            'Expirydate': detail_dict.get('Expiry_Date', None),
                             'PassportNo': detail_dict.get('Passport No', None),
                             }
                         
@@ -251,6 +253,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                         
@@ -271,6 +274,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                         
@@ -293,6 +297,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                         responses.append(response)
@@ -393,6 +398,7 @@ def upload_file():
                             'NIC':detail_dict.get('NIC', None),
                             'Address': detail_dict.get('Address', None),
                             'Issuedate': detail_dict.get('Issue Date', None),
+                            'Expirydate': None,
                             'PassportNo': detail_dict.get('Passport No', None),
                         }
                         responses.append(response)
@@ -414,6 +420,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                         responses.append(response)
@@ -451,6 +458,7 @@ def upload_file():
                                     'NIC':detail_dict.get('NIC', None),
                                     'Address': detail_dict.get('Address', None),
                                     'Issuedate': detail_dict.get('Issued Date', None),
+                                    'Expirydate': None,
                                     'PassportNo': detail_dict.get('Passport No', None),
                                     }
                             responses.append(response)
@@ -472,6 +480,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                             'Issue': "Low_Brightness"
                         }
@@ -495,6 +504,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                         responses.append(response)        
@@ -533,6 +543,7 @@ def upload_file():
                                     'NIC':detail_dict.get('NIC', None),
                                     'Address': detail_dict.get('Address', None),
                                     'Issuedate': detail_dict.get('Issued Date', None),
+                                    'Expirydate': None,
                                     'PassportNo': detail_dict.get('Passport No', None),
                                     }
                             responses.append(response)
@@ -554,6 +565,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                             'Issue': "Low_Brightness"
                         }
@@ -576,6 +588,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                         responses.append(response)
@@ -597,6 +610,7 @@ def upload_file():
                             'NIC':None,
                             'Address': None,
                             'Issuedate': None,
+                            'Expirydate': None,
                             'PassportNo': None,
                         }
                     responses.append(response)
@@ -622,6 +636,7 @@ def upload_file():
                                 'NIC':None,
                                 'Address': None,
                                 'Issuedate': None,
+                                'Expirydate': None,
                                 'PassportNo': None,
                             }
                 responses.append(response)
@@ -967,7 +982,7 @@ def upload_file3():
         description = "Issue With The Uploaded NIC"
 
     response = {
-        'status': res,
+        'NIC_Sides': res,
         'description': description
     }
 

@@ -28,6 +28,10 @@ class OCRDrivingLicensescan:
         x, y, w, h = loc.bbox
         roi = self.img2[y:y+h, x:x+w]
 
+        # cv2.imshow("ROI", roi)
+        # cv2.waitKey(0)  # Wait for a key press before moving to the next ROI
+        # cv2.destroyAllWindows()
+
         self.gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
         self.ocr = pytesseract.image_to_string(self.gray)
         self.parsingResults.append(self.ocr)
@@ -45,6 +49,7 @@ class OCRDrivingLicensescan:
     # Convert date strings to datetime objects
     date_format = '%d.%m.%Y'
     dates = [datetime.strptime(item, date_format) for item in lst if self.is_date(item)]
+    print("NO OF DATES: ", len(dates))
 
     # Remove the oldest and most future dates
     if dates:
@@ -52,7 +57,16 @@ class OCRDrivingLicensescan:
         futurest_date = max(dates)
         lst = [item for item in lst if not (self.is_date(item) and (datetime.strptime(item, date_format) == oldest_date or datetime.strptime(item, date_format) == futurest_date))]
 
-    return lst
+    if futurest_date and len(dates) > 2:
+       ExpDate = futurest_date
+    else:
+       ExpDate = None
+       futurest_date = futurest_date.strftime('%d.%m.%Y')
+       lst.append(str(futurest_date))
+
+    print("LST DATE PASSED: ", lst)
+
+    return lst, ExpDate
   
   def merge_address_values(self,lst):
     merged_list = []
@@ -100,7 +114,8 @@ class OCRDrivingLicensescan:
         if item and not any(word in item for word in ['DRIVING LICENCE NO', 'NATIONAL IDENTITY CARD NO', 'REPUBLIC', 'DEMOCRATIC', 'SOCIALIST', 'Signature']):
             ocr2.append(item)
 
-    
+    # print("ocr1", ocr1)
+    # print("ocr2", ocr2)
 
     patterns = [r"\d{2}\.\d{2}\. \d{4}",
                 r"\d{2}\. \d{2}\.\d{4}",
@@ -115,6 +130,7 @@ class OCRDrivingLicensescan:
               ocr2[i] = ocr2[i].replace(date, date_no_space)
 
   
+    # print("Stage 2: OCR2: ", ocr2)
 
     regex_patterns = [
       r'B\d{6,7}',  # Matches B followed by 7 digits
@@ -147,7 +163,7 @@ class OCRDrivingLicensescan:
         if match:
           results2.append(match.group(0))
 
-
+    # print("Stage 3: OCR2: ", results2)
 
     #Removes duplicate elements which are substring of longer strings
     new_lst1 = []
@@ -174,7 +190,9 @@ class OCRDrivingLicensescan:
         if not is_replicating:
             new_lst2.append(results2[i])
 
-    lst = self.remove_oldest_and_futurest_dates(new_lst2)
+    # print("Stage 4: OCR2: ", new_lst2)
+
+    lst, expDate = self.remove_oldest_and_futurest_dates(new_lst2)
 
     regex_patterns_final = [
         r'B\d{6,7}',  # Matches B followed by 7 digits
@@ -214,6 +232,8 @@ class OCRDrivingLicensescan:
         labeled_data.append(n_item)
 
 
+    # print("Stage05: OCR2: ", lst)
+
     for item in lst:
       if re.search(regex_patterns_final2[0], item):
         n_item = "Address: " + item
@@ -233,17 +253,20 @@ class OCRDrivingLicensescan:
 
 
     if 'Issue Date' in License_Data_dict:
-      # Extract the original issue date
       issue_date_str = License_Data_dict['Issue Date']
-
-      # Convert the issue date string to a datetime object
       issue_date = datetime.strptime(issue_date_str, '%d.%m.%Y')
-
-      # Format the issue date in the desired format
       formatted_issue_date = issue_date.strftime('%Y/%m/%d')
-
-      # Update the dictionary with the formatted issue date
       License_Data_dict['Issue Date'] = formatted_issue_date
+
+    if expDate:
+      if not isinstance(expDate, str):
+          exp_date_str = expDate.strftime('%d.%m.%Y')
+      else:
+          exp_date_str = expDate
+
+      exp_date = datetime.strptime(exp_date_str, '%d.%m.%Y')
+      formatted_exp_date = exp_date.strftime('%Y/%m/%d')
+      License_Data_dict['Expiry_Date'] = formatted_exp_date
 
       if "Name" in License_Data_dict:
         name = License_Data_dict["Name"]
@@ -252,14 +275,14 @@ class OCRDrivingLicensescan:
         License_Data_dict["Name"] = modified_name
 
       if "NIC" in License_Data_dict:
-         nic = License_Data_dict["NIC"]
-        #  License_Data_dict["NIC"] = nic.replace(" ", "")
-         License_Data_dict["NIC"] = nic.replace("v", "V").replace(" ", "")
+        nic = License_Data_dict["NIC"]
+        License_Data_dict["NIC"] = nic.replace("v", "V").replace(" ", "")
+
 
       if "Name" in License_Data_dict:
             name = License_Data_dict["Name"]
             name_parts = name.split(" ")
-            print("Names Length: ", len(name_parts))
+            # print("Names Length: ", len(name_parts))
             if len(name_parts) == 1:
                 License_Data_dict["familyName"] = name_parts[0]
                 License_Data_dict["firstName"] = name_parts[0]
@@ -293,15 +316,15 @@ class OCRDrivingLicensescan:
         for name_part in initials_name_part:
           if name_part:
               initials.append(name_part[0])
-       
-        last_name = name_parts[-1] 
+        
+        last_name = name_parts[-1]  
         nameInitials = '.'.join(initials) + '.'+ last_name
         License_Data_dict["nameInitials"] = nameInitials
        
-
+    # print("License_Data_dict", License_Data_dict)
     License = json.dumps(License_Data_dict, indent= 4)
 
-
+    
     return (License)
 
   def getDL_OCR(self):
