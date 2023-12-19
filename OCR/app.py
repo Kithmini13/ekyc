@@ -987,8 +987,8 @@ def upload_file3():
     }
 
     print("NIC_Sides: ", res)
-    os.remove(os.path.join(app.config['UPLOAD_FOLDER'], front_filename))
-    os.remove(os.path.join(app.config['UPLOAD_FOLDER'], back_filename))
+    # os.remove(os.path.join(app.config['UPLOAD_FOLDER'], front_filename))
+    # os.remove(os.path.join(app.config['UPLOAD_FOLDER'], back_filename))
 
     return jsonify(response)
 
