@@ -982,7 +982,7 @@ def upload_file3():
         description = "Issue With The Uploaded NIC"
 
     response = {
-        'NIC_Sides': res,
+        'status': res,
         'description': description
     }
 
