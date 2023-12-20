@@ -317,7 +317,7 @@ video.addEventListener('play', () => {
 
     await Promise.all([
       displayAction(randomAction),
-      delay(1000).then(() => startTimer(3))
+      delay(2000).then(() => startTimer(3))
     ]);
   }
 
@@ -442,18 +442,6 @@ video.addEventListener('play', () => {
           // isTimerRunning = false;
           // isStepCompleted = true; // Set isStepCompleted to true after displaying the result
           // stopVideo();
-
-
-          // Continue with passing the result via URL after a 2-second delay
-          // setTimeout(() => {
-          //   const res = checkVerification();
-          //   var newUrl = window.location.href + "?result=" + res;
-          //   window.history.pushState({}, "", newUrl);
-          //   displayResult(res);
-          //   isTimerRunning = false;
-          //   isStepCompleted = true; // Set isStepCompleted to true after displaying the result
-          //   stopVideo();
-          // }, 2000); // 2000 milliseconds = 2 seconds
           return;
         }
         startNewAction(); // Start the next action
@@ -492,12 +480,14 @@ video.addEventListener('play', () => {
       if (doesVideoNeedToSave) {
         console.log('saveVideo called');
         showProgressBar();
+        
         saveVideo(blob, user, timeout);
       }
 
 
       var pendingUrl = window.location.href + "#PENDING";
       window.history.pushState({}, "", pendingUrl);
+      stopVideo();
 
 
       // Continue with passing the result via URL after a 15-second delay
@@ -598,76 +588,91 @@ video.addEventListener('play', () => {
 
   // }
 
-  function saveVideo(blob, userId, timeoutFunction) {
+  function saveVideo(blob, userId, timeoutFunction, retryCount = 3) {
     var csrftoken = getCookie('csrftoken');
     const formData = new FormData();
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
+  
     let videoType;
     if (isSafari) {
       videoType = 'video/hevc';
     } else {
       videoType = 'video/mp4';
     }
-
+  
     formData.append('video', blob, `recorded_video.${videoType.split('/')[1]}`);
     formData.append('user_id', userId);
-
-    const xhr = new XMLHttpRequest();
-
-    xhr.upload.addEventListener('progress', (event) => {
-      if (event.lengthComputable) {
-        const percentComplete = (event.loaded / event.total) * 100;
-        console.log(`Upload progress: ${percentComplete.toFixed(2)}%`);
-
-        // Update the progress bar
-        updateProgressBar(percentComplete);
-
-        // Show the progress bar container if it's not already visible
-        // if (progressContainer.style.display === 'none') {
-        //   progressContainer.style.display = 'block';
-        // }
-      }
-    });
-
-    xhr.open('POST', 'https://devekyc.seylan.lk:1003/api/ekyc/save_video/');
-    xhr.setRequestHeader('X-CSRFToken', csrftoken);
-    xhr.timeout = 60000;
-
-    xhr.onload = function () {
-      console.clear();
-      if (xhr.status === 200) {
-        console.log('Video saved successfully.');
-      } else {
-        console.error('Failed to save the video.');
-      }
-
-      console.timeEnd('saveVideo');
-
-      timeoutFunction();
-      hideProgressBar();
-    };
-
-    xhr.onerror = function () {
-      console.clear();
-      console.error('Error saving the video.');
-      timeoutFunction();
-      hideProgressBar();
-    };
-
-    xhr.ontimeout = function () {
-      console.clear();
-      console.error('Request timed out.');
-      xhr.abort();
-      timeoutFunction();
-      hideProgressBar();
-    };
-
-    console.time('saveVideo');
-    xhr.send(formData);
+  
+    function sendRequest(retriesLeft) {
+      const xhr = new XMLHttpRequest();
+  
+      xhr.upload.addEventListener('progress', (event) => {
+        if (event.lengthComputable) {
+          const percentComplete = (event.loaded / event.total) * 100;
+          console.log(`Upload progress: ${percentComplete.toFixed(2)}%`);
+          updateProgressBar(percentComplete);
+        }
+      });
+  
+      xhr.open('POST', 'https://devekyc.seylan.lk:1003/api/ekyc/save_video/');
+      xhr.setRequestHeader('X-CSRFToken', csrftoken);
+      xhr.timeout = 60000;
+  
+      xhr.onload = function () {
+        console.clear();
+        if (xhr.status === 200) {
+          console.log('Video saved successfully.');
+        } else {
+          console.error('Failed to save the video.');
+          if (retriesLeft > 0) {
+            console.log(`Retrying... ${retriesLeft} attempts left.`);
+            sendRequest(retriesLeft - 1);
+          } else {
+            console.log('All retries exhausted. Appending #ERROR to URL.');
+            window.location.hash = 'ERROR';
+          }
+        }
+  
+        console.timeEnd('saveVideo');
+        timeoutFunction();
+        hideProgressBar();
+      };
+  
+      xhr.onerror = function () {
+        console.clear();
+        console.error('Error saving the video.');
+        if (retriesLeft > 0) {
+          console.log(`Retrying... ${retriesLeft} attempts left.`);
+          sendRequest(retriesLeft - 1);
+        } else {
+          console.log('All retries exhausted. Appending #ERROR to URL.');
+          window.location.hash = 'ERROR';
+        }
+        timeoutFunction();
+        hideProgressBar();
+      };
+  
+      xhr.ontimeout = function () {
+        console.clear();
+        console.error('Request timed out.');
+        if (retriesLeft > 0) {
+          console.log(`Retrying... ${retriesLeft} attempts left.`);
+          sendRequest(retriesLeft - 1);
+        } else {
+          console.log('All retries exhausted. Appending #ERROR to URL.');
+          window.location.hash = 'ERROR';
+        }
+        timeoutFunction();
+        hideProgressBar();
+      };
+  
+      console.time('saveVideo');
+      xhr.send(formData);
+    }
+  
+    sendRequest(retryCount);
   }
-
-
+  
 });
 
 
@@ -698,3 +703,5 @@ switchCameraButton.addEventListener('click', () => {
 
   startVideo(currentCamera);
 });
+
+

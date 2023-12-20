@@ -1427,3 +1427,141 @@ INFO:django.server:"GET /api/ekyc/download/231214000013 HTTP/1.1" 301 0
 INFO:django.server:"GET /api/ekyc/download/231214000013/ HTTP/1.1" 200 5126493
 INFO:django.server:"GET /api/ekyc/retrieve_image/231214000013 HTTP/1.1" 301 0
 INFO:django.server:"GET /api/ekyc/retrieve_image/231214000013/ HTTP/1.1" 200 78428
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 44433
+INFO:root:Saving video to /home/seylanb/recorded_video/recorded_video_44433.mp4
+ERROR:root:Error: No write access to the specified path.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 45
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 4443444
+INFO:root:Saving video to E:/recorded_video_n/recorded_video_4443444.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 25
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 4443444
+INFO:root:Saving video to E:/recorded_video_n/recorded_video_4443444.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 25
+INFO:django.server:"GET /api/ekyc/4443444/ HTTP/1.1" 200 4078
+INFO:django.server:"GET /static/overlay.png HTTP/1.1" 200 8622
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.1" 200 586845
+INFO:django.server:"GET /static/client.js HTTP/1.1" 200 19304
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.1" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.1" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.1" 200 18303
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.1" 200 7725
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.1" 200 6384
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.1" 200 34509
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.1" 200 27549
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.1" 200 193321
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.1" 200 356840
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.1" 200 329468
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.1" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.1" 200 4194304
+INFO:django.server:"GET /api/ekyc/4443400000000 HTTP/1.1" 301 0
+INFO:django.server:"GET /api/ekyc/4443400000000/ HTTP/1.1" 200 4084
+INFO:django.server:"GET /static/overlay.png HTTP/1.1" 200 8622
+INFO:django.server:"GET /static/client.js HTTP/1.1" 200 19304
+INFO:django.server:"GET /static/face-api.min.js HTTP/1.1" 200 586845
+INFO:django.server:"GET /static/models/tiny_face_detector_model-weights_manifest.json HTTP/1.1" 200 2953
+INFO:django.server:"GET /static/models/face_landmark_68_model-weights_manifest.json HTTP/1.1" 200 7889
+INFO:django.server:"GET /static/models/face_recognition_model-weights_manifest.json HTTP/1.1" 200 18303
+INFO:django.server:"GET /static/models/face_expression_model-weights_manifest.json HTTP/1.1" 200 6384
+INFO:django.server:"GET /static/voice/left.mp3 HTTP/1.1" 200 27549
+INFO:django.server:"GET /static/voice/smile.mp3 HTTP/1.1" 200 7725
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.1" 200 34509
+INFO:django.server:"GET /static/models/tiny_face_detector_model-shard1 HTTP/1.1" 200 193321
+INFO:django.server:"GET /static/models/face_expression_model-shard1 HTTP/1.1" 200 329468
+INFO:django.server:"GET /static/models/face_landmark_68_model-shard1 HTTP/1.1" 200 356840
+INFO:django.server:"GET /static/models/face_recognition_model-shard2 HTTP/1.1" 200 2249728
+INFO:django.server:"GET /static/models/face_recognition_model-shard1 HTTP/1.1" 200 4194304
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\ekyc production\env379\lib\site-packages\django\urls\resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from 'D:\\new_ekyc_production\\seylan_UAT-V_01.02.26\\ekyc\\webcam\\urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+DEBUG:django.template:Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "D:\ekyc production\env379\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\ekyc production\env379\lib\site-packages\django\urls\resolvers.py", line 589, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'webcam.urls' from 'D:\\new_ekyc_production\\seylan_UAT-V_01.02.26\\ekyc\\webcam\\urls.py'> (webcam:webcam) 'api/ekyc/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ekyc production\env379\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'webcam.urls' from 'D:\\new_ekyc_production\\seylan_UAT-V_01.02.26\\ekyc\\webcam\\urls.py'> (webcam:webcam) 'api/ekyc/'>
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 2228
+INFO:django.server:"GET /static/voice/right.mp3 HTTP/1.1" 200 34509
+INFO:django.server:"POST /api/ekyc/save_image/ HTTP/1.1" 200 39
+INFO:root:SaveVideo POST request received.
+INFO:root:User ID: 4443400000000
+INFO:root:Saving video to E:/recorded_video_n/recorded_video_4443400000000.mp4
+INFO:root:Video saved successfully.
+INFO:django.server:"POST /api/ekyc/save_video/ HTTP/1.1" 200 25
+DEBUG:django.utils.autoreload:File D:\new_ekyc_production\seylan_UAT-V_01.02.26\ekyc\webcam\views.py previous mtime: 1703077580.952191, current mtime: 1703092237.5870547
+DEBUG:django.utils.autoreload:D:\new_ekyc_production\seylan_UAT-V_01.02.26\ekyc\webcam\views.py notified as changed. Signal results: [(<function template_changed at 0x000001D649ADCDC8>, None), (<function translation_file_changed at 0x000001D64A3E29D8>, None)].
+INFO:django.utils.autoreload:D:\new_ekyc_production\seylan_UAT-V_01.02.26\ekyc\webcam\views.py changed, reloading.
