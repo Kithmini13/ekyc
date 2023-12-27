@@ -979,7 +979,7 @@ def upload_file3():
 
     else:
         res = "01"
-        description = "Issue With The Uploaded NIC"
+        description = "Please submit a valid document."
 
     response = {
         'status': res,
