@@ -20,7 +20,6 @@ let shouldSaveVideo = true;
 const audioL = new Audio("/static/voice/left.mp3");
 const audioR = new Audio("/static/voice/right.mp3");
 const audioS = new Audio("/static/voice/smile.mp3");
-// const audioMessage = new Audio("/static/voice/Initial_command.mp3");
 
 const smilingThumbnailCanvas = document.createElement('canvas');
 const smilingThumbnailContext = smilingThumbnailCanvas.getContext('2d');
@@ -29,23 +28,11 @@ let smiling_thumbnail;
 let elapsedTimer = 0;
 let currentAction = '';
 let isFaceDetected = false;
-// let isAudioPlayed = false; // Add a flag to track whether the audio has been played
 
 const userId = userId2
 
 const switchCameraButton = document.getElementById('switchCameraButton');
 let currentCamera = 'environment'; // Default to the front (selfie) camera
-
-// Update the display logic for the overlay and progress bar
-// function updateProgressBar(percentComplete) {
-//   if (percentComplete < 50){
-//     progressBar.style.width = percentComplete + '%';
-//   }
-//   else{
-//     hideProgressBar();
-//   }
-
-// }
 
 function updateProgressBar(percentComplete) {
   progressBar.style.width = percentComplete + '%';
@@ -296,17 +283,6 @@ video.addEventListener('play', () => {
   const displaySize = { width: video.videoWidth, height: video.videoHeight };
   faceapi.matchDimensions(canvas, displaySize);
 
-  // function startNewAction() {
-  //   clearInterval(timerInterval);
-  //   //resetCounters();
-  //   randomAction = actions[currentActionIndex]; // Set the randomAction variable
-  //   displayAction(randomAction);
-  //   // startTimer(6);
-  //   setTimeout(() => {
-  //     startTimer(6);
-  //   }, 2000); // 1500 milliseconds = 1.5 seconds
-  // }
-
   function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -368,17 +344,7 @@ video.addEventListener('play', () => {
 
     if (detections.length > 0) {
       // Start the process if a face is detected
-      // playAudioMessage();
       startProcess();
-
-      // Introduce a delay before starting the actions
-      // setTimeout(() => {
-      //   startProcess(); // Start the actions
-      // }, 5000); // Adjust the delay time (in milliseconds) as needed
-
-      // } else {
-      //   // Stop the process if no face is detected
-      //   stopProcess();
     }
   }
 
@@ -407,18 +373,18 @@ video.addEventListener('play', () => {
 
       if (expressions.happy > expressionThreshold) {
         if (randomAction === "Smile") {
-          console.log('Person is SMILING');
+          // console.log('Person is SMILING');
           smileCount++;
         }
       } else if (nose < 195) {
         if (randomAction === "Turn Right") {
-          console.log('Face turned to RIGHT');
+          // console.log('Face turned to RIGHT');
           turnRightCount++;
         }
 
       } else if (nose > 240) {
         if (randomAction === "Turn Left") {
-          console.log('Face turned to LEFT');
+          // console.log('Face turned to LEFT');
           turnLeftCount++;
         }
 
@@ -434,14 +400,6 @@ video.addEventListener('play', () => {
 
         if (currentActionIndex >= actions.length) {
           mediaRecorder.stop(); // Stop recording when the verification check is performed
-
-          // const res = checkVerification();
-          // var newUrl = window.location.href + "?result=" + res;
-          // window.history.pushState({}, "", newUrl);
-          // displayResult(res);
-          // isTimerRunning = false;
-          // isStepCompleted = true; // Set isStepCompleted to true after displaying the result
-          // stopVideo();
           return;
         }
         startNewAction(); // Start the next action
@@ -473,71 +431,26 @@ video.addEventListener('play', () => {
       const blob = new Blob(chunks, { type: videoType });
       chunks = []; // Clear the chunks array for future recordings
       user = userId;
-      //user = 'gagani3';
+      // user = 'gagani3';
       // passDataToWebView(user);
-      // saveVideo(blob, user, timeout); // Call the function to save the recorded video
       console.log('saveVideo not being called');
       if (doesVideoNeedToSave) {
         console.log('saveVideo called');
         showProgressBar();
-        
-        saveVideo(blob, user, timeout);
+        saveVideo(blob, user, timeout); // Call the function to save the recorded video
       }
-
-
       var pendingUrl = window.location.href + "#PENDING";
       window.history.pushState({}, "", pendingUrl);
       stopVideo();
-
-
-      // Continue with passing the result via URL after a 15-second delay
-      // setTimeout(() => {
-      //   const res = checkVerification();
-      //   var newUrl = window.location.href + "?result=" + res;
-      //   window.history.pushState({}, "", newUrl);
-      //   displayResult(res);
-      //   isTimerRunning = false;
-      //   isStepCompleted = true; // Set isStepCompleted to true after displaying the result
-      //   stopVideo();
-      // }, 15000); // 15000 milliseconds = 15 seconds
-      return;
-
     } else {
       chunks = []; // Clear the chunks array if the recording should not be saved
     }
   };
 
-
   function passResultToFlutter(result) {
     window.flutter_inappwebview.callHandler('resultHandler', result);
     // console.log('-----results-----', result)
   }
-
-
-  // function saveVideo(blob, userId) {
-  //   var csrftoken = getCookie('csrftoken');
-  //   const formData = new FormData();
-  //   formData.append('video', blob, 'recorded_video.mp4');
-  //   formData.append('user_id', userId); // Add user_id to the formData
-  //   // console.log('---blob----', blob)
-  //   fetch('https://devekyc.seylan.lk:1003/api/ekyc/save_video/', {
-  //     method: 'POST',
-  //     headers: {
-  //       'X-CSRFToken': csrftoken,
-  //     },
-  //     body: formData,
-  //   })
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         console.log('Video saved successfully.');
-  //       } else {
-  //         console.error('Failed to save the video.');
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error saving the video:', error);
-  //     });
-  // }
 
   function timeout() {
     const res = checkVerification();
@@ -548,45 +461,6 @@ video.addEventListener('play', () => {
     isStepCompleted = true; // Set isStepCompleted to true after displaying the result
     stopVideo();
   }
-
-
-  // function saveVideo(blob, userId, timeoutFunction) {
-  //   var csrftoken = getCookie('csrftoken');
-  //   const formData = new FormData();
-  //   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-  //   let videoType;
-  //   if (isSafari) {
-  //     videoType = 'video/hevc';
-  //   } else {
-  //     videoType = 'video/mp4';
-  //   }
-
-  //   formData.append('video', blob, `recorded_video.${videoType.split('/')[1]}`);
-  //   formData.append('user_id', userId);
-
-  //   fetch('https://devekyc.seylan.lk:1003/api/ekyc/save_video/', { 
-  //     method: 'POST',
-  //     headers: {
-  //       'X-CSRFToken': csrftoken,
-  //     },
-  //     body: formData,
-  //   })
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         console.log('Video saved successfully.');
-  //       } else {
-  //         console.error('Failed to save the video.');
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error saving the video:', error);
-  //     })
-  //     .finally(()=>{
-  //       timeoutFunction();
-  //     })
-
-  // }
 
   function saveVideo(blob, userId, timeoutFunction, retryCount = 3) {
     var csrftoken = getCookie('csrftoken');

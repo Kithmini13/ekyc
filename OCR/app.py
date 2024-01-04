@@ -974,7 +974,7 @@ def upload_file3():
 
     if front_result == "Front" and back_result == "Back":
         res = "00"
-        description = "No Issues With NIC."
+        description = "No Issues With NIC"
 
 
     else:
